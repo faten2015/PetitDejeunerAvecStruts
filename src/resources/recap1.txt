@@ -1,0 +1,17 @@
+*********Technologies utillisées*************
+
+Au debut j'ai choisi de travailler en spring data puisque on a un projet pret a utiliser
+qu'on a fait pas longtemps et qu'on a maitrisé le plus.
+Aprés j'ai decidé de changer en struts puisque je n'ai pas travaillé avec auparavant en particulier 
+sur un vrai projet et ça sera une opportunité pour savoir plus sur struts.
+
+
+***********Problemes Rencontrées***********
+-Le temps(vendredi apres midi et lundi)
+-Connaissances pas top en struts il faut voir des tutos et chercher pour comprendre le fonctionnement.
+
+
+*************Travail fait*********
+-j'ai fait la partie fonctionnelle(ajout suppression modification detail affichage login)
+-A travailler encore parceque j'ai commencé ce matin donc j'ai pas le temps de tout finir mais globalement 
+l'affichage marche.  

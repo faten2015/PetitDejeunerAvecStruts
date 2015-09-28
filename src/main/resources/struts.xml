@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default"  namespace="/" extends="struts-default">
+	
+	<default-action-ref name="index" />
+		<action name="login" class="fr.treeptik.action.LoginAction" method="execute">
+			<result type="redirectAction">
+				<param name="login">/pages/petitdej/login-form.jsp</param>
+			</result>
+			<result name="success">/pages/petitdej/login-success.jsp</result>
+			<result name="error">/pages/petitdej/login-error.jsp</result>
+		</action>
+	    
+		<action name="listPetitDej" class="fr.treeptik.action.PetitDejAction" method="findAll">
+		   
+			<result>/pages/petitdej/listPetitDej.jsp</result>
+		</action>
+		
+		<action name="petitDejById" class="fr.treeptik.action.PetitDejAction" method="find">
+		
+			<result>/pages/petitdej/detailPetitDej.jsp</result>
+		</action>
+		
+		<action name="delete" class="fr.treeptik.action.PetitDejAction" method="delete">
+		
+			<result>/pages/petitdej/listPetitDej.jsp</result>
+		</action>
+		
+		<action name="update" class="fr.treeptik.action.PetitDejAction" method="update">
+		
+			<result>/pages/petitdej/listPetitDej.jsp</result>
+		</action>
+		
+		<action name="ajouterPetitDej" class="fr.treeptik.action.PetitDejAction" method="save">
+		
+			<result>/pages/petitdej/listPetitDej.jsp</result>
+		</action>
+		
+		
+		<action name="listTeam" class="fr.treeptik.action.TeamAction" method="findAll">
+		   
+			<result>/pages/petitdej/listTeam.jsp</result>
+		</action>
+		
+		
+		<action name="teamById" class="fr.treeptik.action.TeamAction" method="find">
+		
+			<result>/pages/petitdej/detailTeam.jsp</result>
+		</action>
+		
+		<action name="delete" class="fr.treeptik.action.TeamAction" method="delete">
+		
+			<result>/pages/petitdej/listTeam.jsp</result>
+		</action>
+		
+		<action name="update" class="fr.treeptik.action.TeamAction" method="update">
+		
+			<result>/pages/petitdej/listTeam.jsp</result>
+		</action>
+		
+		<action name="ajouterTeam" class="fr.treeptik.action.TeamAction" method="save">
+		
+			<result>/pages/petitdej/listTeam.jsp</result>
+		</action>
+		
+
+	
+		<action name="listNote" class="fr.treeptik.action.NoteAction" method="findAll">
+		   
+			<result>/pages/petitdej/listNote.jsp</result>
+		</action>
+		
+		<action name="noteById" class="fr.treeptik.action.NoteAction" method="find">
+		
+			<result>/pages/petitdej/detailNote.jsp</result>
+		</action>
+		
+		<action name="delete" class="fr.treeptik.action.NoteAction" method="delete">
+		
+			<result>/pages/petitdej/listNote.jsp</result>
+		</action>
+		
+		<action name="update" class="fr.treeptik.action.NoteAction" method="update">
+		
+			<result>/pages/petitdej/listNote.jsp</result>
+		</action>
+		
+		<action name="ajouterNote" class="fr.treeptik.action.NoteAction" method="save">
+		
+			<result>/pages/petitdej/listNote.jsp</result>
+		</action>
+		
+
+		<action name="listMember" class="fr.treeptik.action.MemberAction" method="findAll">
+		   
+			<result>/pages/petitdej/listMember.jsp</result>
+		</action>
+		
+		
+		<action name="memberById" class="fr.treeptik.action.MemberAction" method="find">
+		
+			<result>/pages/petitdej/detailMembre.jsp</result>
+		</action>
+		
+		<action name="delete" class="fr.treeptik.action.MemberAction" method="delete">
+		
+			<result>/pages/petitdej/listMember.jsp</result>
+		</action>
+		
+		<action name="update" class="fr.treeptik.action.MemberAction" method="update">
+		
+			<result>/pages/petitdej/listMember.jsp</result>
+		</action>
+		
+		<action name="ajouterMember" class="fr.treeptik.action.MemberAction" method="save">
+		
+			<result>/pages/petitdej/listMember.jsp</result>
+		</action>
+		
+		
+		
+		
+		<!-- <action name="login-form">
+			<result>/pages/petitdej/login-form.jsp</result>
+		</action>
+
+		<action name="login" class="fr.treeptik.action.LoginAction" method="execute">
+			<result name="success">/pages/petitdej/login-success.jsp</result>
+			<result name="error">/pages/petitdej/login-error.jsp</result>
+		</action>
+		 -->
+		
+		
+	</package>
+
+</struts>
