@@ -16,9 +16,9 @@
 
 <s:iterator value="listNote">
 <tr>
-   <td width="10%"><a href="<s:url action="noteById"><s:param name="id"><s:property value="id"/></s:param></s:url>"><s:property value="note"/></a></td>
-    <td width="20%"><s:property value="commetaires"/></td>
-    <td width="20%"><s:property value="prescence"/></td>
+   <td width="10%"><a href="<s:url action="noteById"><s:param name="id"><s:property value="noteById.id"/></s:param></s:url>"><s:property value="note"/></a></td>
+    <td width="20%"><s:property value="noteById.commetaires"/></td>
+    <td width="20%"><s:property value="noteById.prescence"/></td>
 </tr>
 
 <div>

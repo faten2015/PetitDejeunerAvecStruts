@@ -56,8 +56,8 @@ public class MemberAction extends ActionSupport {
 			memberDao.persist(memberById);
 		else{
 			memberDao.update(memberById);
-	        editMode=false;
-	//   petitDejById=new PetitDej();
+	        editMode=true;
+           memberById=new Member();
 	   
 		}
 		listMember=memberDao.findAll();

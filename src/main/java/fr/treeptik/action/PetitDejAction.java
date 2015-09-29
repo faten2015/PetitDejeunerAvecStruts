@@ -56,7 +56,7 @@ public class PetitDejAction extends ActionSupport {
 		else{
 			petDejDao.update(petitDejById);
 	        editMode=true;
-	//   petitDejById=new PetitDej();
+	        petitDejById=new PetitDej();
 	   
 		}
 		listPetitDej=petDejDao.findAll();

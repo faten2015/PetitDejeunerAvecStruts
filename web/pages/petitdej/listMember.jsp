@@ -15,7 +15,9 @@
 
 <s:iterator value="listMember">
 <tr>
-<td width="10%"><a href="<s:url namespace="/" action="memberById"><s:param name="id"><s:property value="id"/></s:param></s:url>"><s:property value="firstName"/></a></td>
+ 
+<td width="10%"><a href="<s:url namespace="/" action="memberById">
+   <s:param name="id"><s:property value="id"/></s:param></s:url>"><s:property value="firstName"/></a></td>
     <td width="20%"><s:property value="lastName"/></td>
     <td width="20%"><s:property value="preference"/></td>
 </tr>

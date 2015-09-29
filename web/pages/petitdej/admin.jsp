@@ -4,33 +4,41 @@
 <head>
 </head>
 <body>
+
 <h4> Administration </h4>
- <table>
-    <tr>
-<td align=left valign=top><input type=submit name="Liste des Petits Dejeuners" value="  Petits Dejeuners  "><input
-             type="button"
-             value="  Cancel  "
-             onClick="window.location.href='listPetitDej.jsp'">
-      </td>
- <td align=left valign=top><input type=submit name="Liste des utilisateurs" value="  Petits Dejeuners  "><input
-             type="button"
-             value="  Cancel  "
-             onClick="window.location.href='listMember.jsp'">
-      </td>
-      
-      <td align=left valign=top><input type=submit name="Liste des equipes" value="  Petits Dejeuners  "><input
-             type="button"
-             value="  Cancel  "
-             onClick="window.location.href='listTeam.jsp'">
-      </td>
-      
-      <td align=left valign=top><input type=submit name="Liste des apprecaitions" value="  Petits Dejeuners  "><input
-             type="button"
-             value="  Cancel  "
-             onClick="window.location.href='listNote.jsp'">
-      </td>     
-      </tr>
-      
-      
-       <table>
-    <tr>
+
+
+
+<tr>
+<s:url namespace="/" action="listPetitDej" var="listPetitDej.jsp">
+       
+        </s:url>
+    
+         <td><s:a href="%{listPetitDej.jsp}">liste2</s:a></td>
+
+</tr>
+<tr>
+<s:url namespace="/" action="listMember" var="listMember.jsp">
+       
+        </s:url>
+    
+         <td><s:a href="%{listMember.jsp}">liste2</s:a></td>
+
+</tr>
+<tr>
+
+<s:url namespace="/" action="listTeam" var="listTeam.jsp">
+       
+        </s:url>
+    
+         <td><s:a href="%{listTeam.jsp}">liste2</s:a></td>
+     </tr>
+     
+     <tr>    
+         
+         <s:url namespace="/" action="listNote" var="listNote.jsp">
+       
+        </s:url>
+    
+        <td><s:a href="%{listNote.jsp}">liste2</s:a></td>
+        </tr>

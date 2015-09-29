@@ -7,6 +7,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 import fr.treeptik.jpa.entity.Member;
+import fr.treeptik.service.MemberService;
 
 public class LoginAction extends ActionSupport implements SessionAware {
 
@@ -14,13 +15,18 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 	private String message;
 	private Member member;
-
+    private MemberService memberService=new MemberService();
 	private Map<String, Object> session;
 
 	public String execute() throws Exception {
-		session.put("USER", member);
-		setMessage("vous êtes connecté sous " + member.getLogin());
-		return SUCCESS;
+		System.out.println(member.getLogin());
+		System.out.println(member.getPassword());
+		boolean login = memberService.login(member);
+		if (login) {
+			setMessage("vous êtes connecté sous " + member.getLogin());
+			return SUCCESS;
+		}
+		return ERROR;
 	}
 
 	public String getMessage() {
