@@ -86,7 +86,7 @@ public class NoteAction extends ActionSupport {
 			noteDao.persist(noteById);
 		else{
 			noteDao.update(noteById);
-	   editMode=false;
+	        editMode=true;
 	//   petitDejById=new PetitDej();
 	   
 		}

@@ -23,13 +23,13 @@
     <td width="20%"><s:property value="frequence"/></td>
     <s:url namespace="/" action="delete" var="lien1">
         <s:param name="id">
-        <s:property value="id"/>
+        <s:property value="petitDejById.id"/>
         </s:param>
         </s:url>
         
         <s:url namespace="/" action="update" var="lien2">
         <s:param name="id">
-        <s:property value="id"/>
+        <s:property value="petitDejById.id"/>
         </s:param>
         </s:url>
         <td><s:a href="%{lien1}">Supprimer</s:a></td>
@@ -40,11 +40,11 @@
 
 <s:form action="ajouterPetitDej" method="post">
 <h3>Ajout d'un petit Dejeuner</h3>
-            <s:textfield name="date" label="Date" required="true"></s:textfield>
-            <s:textfield name="typedej" label="Type" required="true"></s:textfield>
-            <s:textfield name="prix" label="Prix" required="true"></s:textfield>
-            <s:textfield name="annulable" label="Annulable" required="true"></s:textfield>
-            <s:textfield name="frequence" label="Frequence" required="true"></s:textfield>
+            <s:textfield name="petitDejById.date" label="Date" required="true"></s:textfield>
+            <s:textfield name="petitDejById.typedej" label="Type" required="true"></s:textfield>
+            <s:textfield name="petitDejById.prix" label="Prix" required="true"></s:textfield>
+            <s:textfield name="petitDejById.annulable" label="Annulable" required="true"></s:textfield>
+            <s:textfield name="petitDejById.frequence" label="Frequence" required="true"></s:textfield>
      
             <s:submit value="validez" name="submit">
         </s:submit></s:form>

@@ -55,7 +55,7 @@ public class PetitDejAction extends ActionSupport {
 			petDejDao.persist(petitDejById);
 		else{
 			petDejDao.update(petitDejById);
-	   editMode=false;
+	        editMode=true;
 	//   petitDejById=new PetitDej();
 	   
 		}

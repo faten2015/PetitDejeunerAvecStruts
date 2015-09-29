@@ -20,6 +20,18 @@
     <td width="20%"><s:property value="commetaires"/></td>
     <td width="20%"><s:property value="prescence"/></td>
 </tr>
+
+<div>
+
+<s:form action="ajouterNote" method="post">
+<h3>Ajout d'une appréciation sur un petit dejeuner</h3>
+            <s:textfield name="noteById.note" label="Note" required="true"></s:textfield>
+            <s:textfield name="noteById.commentaires" label="Commentaires" required="true"></s:textfield>
+            <s:textfield name="noteById.prescence" label="Prescence" required="true"></s:textfield>
+
+            <s:submit value="validez" name="submit">
+        </s:submit></s:form>
+  </div>
  
 </s:iterator>
 

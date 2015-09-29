@@ -15,13 +15,13 @@
     
     <s:url namespace="/" action="delete" var="lien1">
         <s:param name="id">
-        <s:property value="id"/>
+        <s:property value="teamById.id"/>
         </s:param>
         </s:url>
         
         <s:url namespace="/" action="update" var="lien2">
         <s:param name="id">
-        <s:property value="id"/>
+        <s:property value="teamById.id"/>
         </s:param>
         </s:url>
         <td><s:a href="%{lien1}">Supprimer</s:a></td>
@@ -32,7 +32,7 @@
 
 <s:form action="ajouterTeam" method="post">
 <h3>Ajout d'une equipe</h3>
-            <s:textfield name="libelle" label="Libelle" required="true">
+            <s:textfield name="teamById.libelle" label="Libelle" required="true">
           
              </s:textfield>
             <s:submit value="validez" name="submit">

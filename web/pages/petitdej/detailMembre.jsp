@@ -19,13 +19,13 @@
     <td width="20%"><s:property value="preference"/></td>
     <s:url namespace="/" action="delete" var="lien1">
         <s:param name="id">
-        <s:property value="id"/>
+        <s:property value="memberById.id"/>
         </s:param>
         </s:url>
         
         <s:url namespace="/" action="update" var="lien2">
         <s:param name="id">
-        <s:property value="id"/>
+        <s:property value="memberById.id"/>
         </s:param>
         </s:url>
         <td><s:a href="%{lien1}">Supprimer</s:a></td>
@@ -36,10 +36,9 @@
 
 <s:form action="ajouterMember" method="post">
 <h3>Ajout d'un utilisateur</h3>
-            <s:textfield name="firstName" label="Nom" required="true">
-            <s:textfield name="lastName" label="Prenom" required="true">
-            <s:textfield name="preference" label="Prefernce" required="true">
-      </s:textfield></s:textfield></s:textfield>
+            <s:textfield name="memberById.firstName" label="Nom" required="true"></s:textfield>
+            <s:textfield name="memberById.lastName" label="Prenom" required="true"></s:textfield>
+            <s:textfield name="memberById.preference" label="Prefernce" required="true"></s:textfield>    
             <s:submit value="validez" name="submit">
         </s:submit></s:form>
   </div>
