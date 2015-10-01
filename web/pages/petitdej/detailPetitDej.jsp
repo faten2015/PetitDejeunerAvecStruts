@@ -1,14 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
+
 <html>
 <head>
-<!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 
 
-<h4> Detail petit déjeuner </h4>
+<h1> Detail petit déjeuner </h1>
 <div>
 <table border="1" class="table1">
 <tr>
@@ -42,8 +43,16 @@
         <s:property value="petitDejById.id"/>
         </s:param>
         </s:url>
+        
+        <s:url namespace="/" action="ajouterNote" var="lien3">
+        <s:param name="id">
+        <s:property value="petitDejById.id"/>
+        </s:param>
+        </s:url>
+        
         <td><s:a href="%{lien1}" onClick="return('Vous etes sur?')">Supprimer</s:a></td>
          <td><s:a href="%{lien2}">Editer</s:a></td>
+          <td><s:a href="%{lien3}">Donner Note</s:a></td>
 </tr>
 </s:iterator>
 
@@ -58,6 +67,9 @@
 
             <s:form action="ajouterPetitDej" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
                     label="Ajouter Petit Dejeuner" method="post">
+                    
+                  
+                    
                 <s:textfield
                         label="Date"
                         name="petitDejById.date"

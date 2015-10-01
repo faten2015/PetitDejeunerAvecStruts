@@ -1,16 +1,3 @@
-div{
-	bordeer: 1px dotted gray;
-	padding: 5px;
-	margin: 5px;
-}
-.table1 th{
-	border:1px dotted gray;
-	padding: 2px;
-	background: maroon;
-    color: white;
-}
-.table1 td{
-	border: 1px dotted gray;
-	padding: 2px;
-	background: white;
-}
+h1 { font-weight:bold; color: brown; font-size:15px; text-align:left;}
+td { font-size:15px; padding-right:10px; }
+th { text-align:left; font-weight:bold; font-size:13px; padding-right:15px; }

@@ -28,8 +28,15 @@
         <s:property value="id"/>
         </s:param>
         </s:url>
+        
+         <s:url namespace="/" action="ajouterMember" var="lien3">
+        <s:param name="teamById.id">
+        <s:property value="memberById.id"/>
+        </s:param>
+        </s:url>
         <td><s:a href="%{lien1}">Supprimer</s:a></td>
          <td><s:a href="%{lien2}">Editer</s:a></td>
+         <td><s:a href="%{lien3}">Affecter un utilisateur</s:a></td>
 </tr>
 </s:iterator>
 </table>

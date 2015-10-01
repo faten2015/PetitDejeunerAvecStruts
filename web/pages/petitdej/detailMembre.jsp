@@ -29,6 +29,8 @@
         <s:property value="memberById.id"/>
         </s:param>
         </s:url>
+        
+        
         <td><s:a href="%{lien1}">Supprimer</s:a></td>
          <td><s:a href="%{lien2}">Editer</s:a></td>
 </tr>

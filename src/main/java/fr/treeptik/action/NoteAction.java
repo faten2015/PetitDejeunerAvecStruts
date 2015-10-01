@@ -87,7 +87,7 @@ public class NoteAction extends ActionSupport {
 		else{
 			noteDao.update(noteById);
 	        editMode=true;
-	//   petitDejById=new PetitDej();
+	        noteById=new Note();
 	   
 		}
 		listNote=noteDao.findAll();

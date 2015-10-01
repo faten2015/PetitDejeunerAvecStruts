@@ -4,6 +4,9 @@
 <head>
 </head>
 <body>
+
+
+
 <h4> Detail des appéricaitions </h4>
 <table border="1">
 <tr>
@@ -15,7 +18,6 @@
 <s:iterator value="noteById">
 <tr>
     <td width="10%"><a href="<s:url namespace="/" action="listNote"><s:param name="id"><s:property value="id"/></s:param></s:url>"><s:property value="note"/></a></td>
-    <td width="20%"><s:property value="note"/></td>
     <td width="20%"><s:property value="commentaires"/></td>
     <td width="20%"><s:property value="prescence"/></td>
     <s:url namespace="/" action="deleteNote" var="lien1">
@@ -33,20 +35,12 @@
          <td><s:a href="%{lien2}">Editer</s:a></td>
 </tr>
 </s:iterator>
+</div>
+</table>
+  
 <div>
 
-<s:form action="ajouterNote" method="post">
-<h3>Ajout d'une appréciation sur un petit dejeuner</h3>
-            <s:textfield name="noteById.note" label="Note" required="true">
-            <s:textfield name="noteById.commentaires" label="Commentaires" required="true">
-            <s:textfield name="noteById.prescence" label="Prescence" required="true">
-      </s:textfield></s:textfield></s:textfield>
-            <s:submit value="validez" name="submit">
-        </s:submit></s:form>
-  </div>
-  
-  
-  <div>
+ 
    <s:actionerror theme="bootstrap"/>
             <s:actionmessage theme="bootstrap"/>
             <s:fielderror theme="bootstrap"/>
@@ -54,7 +48,7 @@
 
             <s:form action="ajouterNote" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
                     label="Ajouter Note" method="post">
-                    <s:submit value="validez" name="submit">
+                   
                     
                      <s:textfield
                         label="Note"
@@ -77,8 +71,13 @@
                         headerValue="None"/>
                         
                     
-                    
-                    
+             <s:hidden name="editMode"></s:hidden>
+                     
+          
+
+              
+
+               <s:submit value="validez" name="submit">
         </s:submit>
             </s:form>
   
@@ -96,7 +95,7 @@
   
   
   
-</table>
+
 </body>
 </html>
 

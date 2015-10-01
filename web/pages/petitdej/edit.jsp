@@ -7,8 +7,8 @@
 </head>
 <body>
 
-   <s:form action="ajouterPetitDej" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
-                    label="Ajouter Petit Dejeuner" method="post">
+   <s:form action="updatePetitDej" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
+                    label="Editer Petit Dejeuner" method="post">
                 <s:textfield
                         label="Date"
                         name="petitDejById.date"
