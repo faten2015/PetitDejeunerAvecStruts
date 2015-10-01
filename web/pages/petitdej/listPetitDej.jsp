@@ -5,7 +5,7 @@
 </head>
 <body>
 <h4> Les dates des petit déjeuner </h4>
-<table border="0">
+<table border="2">
 
 <s:iterator value="listPetitDej">
 <tr>
@@ -13,6 +13,7 @@
 
 </tr>
 </s:iterator>
+
 
 </table>
 </body>

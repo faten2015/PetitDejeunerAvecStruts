@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.3//EN"
+       "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+
+	<field name="petitdej.date">
+		<field-validator type="required">
+			<message key="date.obligatoire"></message>
+		</field-validator>
+
+		<!-- <field-validator type="stringlength">
+			<param name="maxLength">4</param>
+			<param name="minLength">2</param>
+			<message>L'identifiant doit contennir entre ${minLength} and et
+				${maxLength} caractères</message>
+		</field-validator> -->
+	</field>
+	
+</validators>

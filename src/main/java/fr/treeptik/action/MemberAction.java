@@ -66,6 +66,7 @@ public class MemberAction extends ActionSupport {
 	
 	
 	public String delete(){
+		System.out.println(id);
 		memberById=memberDao.find(id);
 		memberDao.delete(memberById);
 		listMember=memberDao.findAll();

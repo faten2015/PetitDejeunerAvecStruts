@@ -3,6 +3,8 @@ package fr.treeptik.action;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import fr.treeptik.jpa.entity.PetitDej;
@@ -16,13 +18,11 @@ public class PetitDejAction extends ActionSupport {
 
 
 	private PetitDejDao petDejDao;
-	private List<PetitDej> listPetitDej;
+	public List<PetitDej> listPetitDej;
 	public PetitDej petitDejById=new PetitDej();
-	
 	private Integer id;
-
-
 	private boolean editMode=false;
+
     
  
     public PetitDej getPetitDejById() {
@@ -55,7 +55,7 @@ public class PetitDejAction extends ActionSupport {
 			petDejDao.persist(petitDejById);
 		else{
 			petDejDao.update(petitDejById);
-	        editMode=true;
+	        editMode=false;
 	        petitDejById=new PetitDej();
 	   
 		}
@@ -78,13 +78,16 @@ public class PetitDejAction extends ActionSupport {
 		petitDejById=petDejDao.find(id);
 		petDejDao.delete(petitDejById);
 		listPetitDej=petDejDao.findAll();
+	
 		return SUCCESS;
 	} 
 
 	
 	public String update(){
 		editMode=true;
+		System.out.println(id);
 		petitDejById=petDejDao.find(id);
+		//listPetitDej.add(petitDejById.getId(), petitDejById);
 		petDejDao.update(petitDejById);
 		listPetitDej=petDejDao.findAll();
 		return SUCCESS;
@@ -107,5 +110,6 @@ public class PetitDejAction extends ActionSupport {
 		this.listPetitDej = listPetitDej;
 	}
 
+	
 	
 }

@@ -18,7 +18,8 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public Member find(int id) {
-		return entityManager.find(Member.class, id);
+		Member find = entityManager.find(Member.class, id);
+		return find;
 	}
 
 	@Override
@@ -36,9 +37,11 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public void delete(Member obj) {
+		if (obj != null){
 		entityManager.getTransaction().begin();
 		entityManager.remove(obj);
-		entityManager.getTransaction().commit();
+  	    entityManager.getTransaction().commit();
+		}
 	}
 
 	@Override
