@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 <h4> Les appréciations </h4>
@@ -20,7 +21,7 @@
 </s:iterator>
 </table>
 
-
+<br />
 <div>
 
  
@@ -49,9 +50,19 @@
                         label="Prescence"
                         list="{'true', 'false'}"
                         name="noteById.prescence"
-                        emptyOption="true"
+                        emptyOption="false"
                         headerKey="None"
                         headerValue="None"/>
+                        
+                        <s:textfield
+                        label="Member"
+                        name="noteById.member.id"
+                        tooltip="Entrez L'utilisateur"/>
+                       
+                        <s:textfield
+                        label="Petit Dejeuner"
+                        name="noteById.petitdej.id"
+                        tooltip="Entrez Le petit dejeuner"/>    
                         
                     
              <s:hidden name="editMode"></s:hidden>

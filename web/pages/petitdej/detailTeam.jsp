@@ -40,15 +40,15 @@
 </tr>
 </s:iterator>
 </table>
-  
+  <br />
    <div>
      <s:actionerror theme="bootstrap"/>
             <s:actionmessage theme="bootstrap"/>
             <s:fielderror theme="bootstrap"/>
 
 
-            <s:form action="ajouterTeam" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
-                    label="Ajouter Equipe" method="post">
+            <s:form action="updateTeam" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
+                    label="Editer Equipe" method="post">
                 <s:textfield
                         label="Nom"
                         name="teamById.libelle"

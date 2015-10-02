@@ -15,9 +15,33 @@
     
 </tr>
 </s:iterator>
-
-
-
 </table>
+<br/>
+
+
+ <div>
+     <s:actionerror theme="bootstrap"/>
+            <s:actionmessage theme="bootstrap"/>
+            <s:fielderror theme="bootstrap"/>
+
+
+            <s:form action="ajouterTeam" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
+                    label="Ajouter Equipe" method="post">
+                <s:textfield
+                        label="Nom"
+                        name="teamById.libelle"
+                        tooltip="Entrez la libelle"/>
+                        
+                        
+  
+   <s:submit value="validez" name="submit">
+        </s:submit>
+            </s:form>
+
+  </div>
+ 
+
+
+
 </body>
 </html>

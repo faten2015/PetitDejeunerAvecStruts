@@ -39,6 +39,8 @@ private static final long serialVersionUID = 1L;
 	
 	private String description;
 	
+	
+
 	private String frequence;
 	
 	
@@ -46,6 +48,15 @@ private static final long serialVersionUID = 1L;
 	private Team team;
 	
 	private boolean annulable;
+
+	public PetitDej(String string) {
+		description=string;
+		
+	}
+
+	public PetitDej() {
+		super();
+	}
 
 	public Integer getId() {
 		return id;
@@ -119,7 +130,10 @@ private static final long serialVersionUID = 1L;
 		this.annulable = annulable;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "PetitDej [id=" + id + "]";
+	}
 	
 	
 

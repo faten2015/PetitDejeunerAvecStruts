@@ -11,6 +11,8 @@
     <td width="10%">Nom</td>
     <td width="20%">Prenom</td>
     <td width="20%">Preference</td>
+  
+    
 </tr>
 
 <s:iterator value="listMember">
@@ -23,9 +25,62 @@
 </tr>
  
 </s:iterator>
-
-
-
 </table>
+<br />
+<div>
+     <s:actionerror theme="bootstrap"/>
+            <s:actionmessage theme="bootstrap"/>
+            <s:fielderror theme="bootstrap"/>
+
+
+            <s:form action="ajouterMember" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
+                    label="Ajouter Utilisateur" method="post">
+                <s:textfield
+                        label="Nom"
+                        name="memberById.firstName"
+                        tooltip="Entrez le nom"/>
+  
+               <s:textfield
+                        label="Prenom"
+                        name="memberById.lastName"
+                        tooltip="Entrez le prenom"/>
+               <s:textfield
+                        label="Login"
+                        name="memberById.login"
+                        tooltip="Entrez le login"/>
+                        
+                        
+                <s:password
+                        label="Mot de Passe"
+                        name="memberById.password"
+                        tooltip="Entrez le mot de passe"/>
+               
+             <s:select
+                        tooltip="Entrez votre préference"
+                        label="Preference"
+                        list="{'SUCRE', 'SALE'}"
+                        name="memberById.preference"
+                        emptyOption="true"
+                        headerKey="None"
+                        headerValue="None"/>
+                        
+                        
+                <s:textfield
+                        label="Equipe"
+                        name="memberById.team.id"
+                        tooltip="Entrez l'equipe"/>
+                        
+                 <s:textfield
+                        label="Petit Dejeuner"
+                        name="memberById.petitdej.id"
+                        tooltip="Entrez Le petit dejeuner"/>         
+  
+   <s:submit value="validez" name="submit">
+        </s:submit>
+            </s:form>
+  
+  </div>
+  
+  
 </body>
 </html>

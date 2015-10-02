@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 import com.opensymphony.xwork2.ActionSupport;
 
 import fr.treeptik.jpa.entity.PetitDej;
+import fr.treeptik.jpa.entity.Team;
 import fr.treeptik.jpa.dao.PetitDejDao;
 import fr.treeptik.jpa.dao.impl.DaoFactory;
 
@@ -22,6 +23,7 @@ public class PetitDejAction extends ActionSupport {
 	public PetitDej petitDejById=new PetitDej();
 	private Integer id;
 	private boolean editMode=false;
+	private Team team=new Team();
 
     
  
@@ -106,6 +108,16 @@ public class PetitDejAction extends ActionSupport {
 
 	public void setListPetitDej(List<PetitDej> listPetitDej) {
 		this.listPetitDej = listPetitDej;
+	}
+
+
+	public Team getTeam() {
+		return team;
+	}
+
+
+	public void setTeam(Team team) {
+		this.team = team;
 	}
 
 	

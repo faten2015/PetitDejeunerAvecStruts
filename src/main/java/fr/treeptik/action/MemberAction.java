@@ -6,6 +6,8 @@ import java.util.List;
 import com.opensymphony.xwork2.ActionSupport;
 
 import fr.treeptik.jpa.entity.Member;
+import fr.treeptik.jpa.entity.PetitDej;
+import fr.treeptik.jpa.entity.Team;
 import fr.treeptik.jpa.dao.MemberDao;
 import fr.treeptik.jpa.dao.impl.DaoFactory;
 
@@ -18,6 +20,8 @@ public class MemberAction extends ActionSupport {
 	private MemberDao memberDao;
 	private List<Member> listMember;
 	public Member memberById=new Member();
+	private Team team=new Team();
+	private PetitDej petitdej=new PetitDej();
 	
 	private Integer id;
 
@@ -110,6 +114,26 @@ public class MemberAction extends ActionSupport {
 
 	public void setListMember(List<Member> listMember) {
 		this.listMember = listMember;
+	}
+
+
+	public Team getTeam() {
+		return team;
+	}
+
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+
+
+	public PetitDej getPetitdej() {
+		return petitdej;
+	}
+
+
+	public void setPetitdej(PetitDej petitdej) {
+		this.petitdej = petitdej;
 	}
 
 	

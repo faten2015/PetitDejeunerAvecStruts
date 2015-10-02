@@ -11,6 +11,10 @@
     <td width="10%">Nom</td>
     <td width="20%">Prenom</td>
     <td width="20%">Preference</td>
+    <td width="10%">Login</td>
+    <td width="20%">Password</td>
+    <td width="20%">Team</td>
+     <td width="20%">Petit Dejeuner</td>
 </tr>
 
 <s:iterator value="memberById">
@@ -18,6 +22,10 @@
     <td width="10%"><a href="<s:url namespace="/" action="listMember"><s:param name="id"><s:property value="id"/></s:param></s:url>"><s:property value="firstName"/></a></td>
     <td width="20%"><s:property value="lastName"/></td>
     <td width="20%"><s:property value="preference"/></td>
+    <td width="20%"><s:property value="login"/></td>
+    <td width="20%"><s:property value="password"/></td>
+    <td width="20%"><s:property value="memberById.team.id"/></td>
+    <td width="20%"><s:property value="memberById.petitdej.id"/></td>
     <s:url namespace="/" action="deleteMember" var="lien1">
         <s:param name="id">
         <s:property value="memberById.id"/>
@@ -36,6 +44,7 @@
 </tr>
 </s:iterator>
 </table>
+<br />
 
   <div>
      <s:actionerror theme="bootstrap"/>
@@ -43,8 +52,8 @@
             <s:fielderror theme="bootstrap"/>
 
 
-            <s:form action="ajouterMember" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
-                    label="Ajouter Utilisateur" method="post">
+            <s:form action="updateMember" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
+                    label="Editer Utilisateur" method="post">
                 <s:textfield
                         label="Nom"
                         name="memberById.firstName"
@@ -60,7 +69,7 @@
                         tooltip="Entrez le login"/>
                         
                         
-                <s:textfield
+                <s:password
                         label="Mot de Passe"
                         name="memberById.password"
                         tooltip="Entrez le mot de passe"/>
@@ -75,7 +84,15 @@
                         emptyOption="true"
                         headerKey="None"
                         headerValue="None"/>
+                  <s:textfield
+                        label="Equipe"
+                        name="memberById.team.id"
+                        tooltip="Entrez l'equipe"/>
                         
+                 <s:textfield
+                        label="Petit Dejeuner"
+                        name="memberById.petitdej.id"
+                        tooltip="Entrez Le petit dejeuner"/>         
   
    <s:submit value="validez" name="submit">
         </s:submit>

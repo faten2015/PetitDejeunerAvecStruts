@@ -16,6 +16,18 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "equipe")
 public class Team {
+	
+	
+	
+public Team() {
+		super();
+	}
+
+@Override
+	public String toString() {
+		return "Team [id=" + id + "]";
+	}
+
 private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -29,6 +41,10 @@ private static final long serialVersionUID = 1L;
 	
 
 	//private Responsable responsable;
+
+	public Team(String string) {
+		libelle=string;
+	}
 
 	public Integer getId() {
 		return id;

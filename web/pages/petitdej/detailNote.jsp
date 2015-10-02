@@ -13,6 +13,8 @@
     <td width="10%">Note</td>
     <td width="20%">Commentaires</td>
     <td width="20%">Prescence</td>
+   <td width="20%">Utilisateur</td>
+   <td width="20%">Petit Dejeuner</td>
 </tr>
 
 <s:iterator value="noteById">
@@ -20,6 +22,8 @@
     <td width="10%"><a href="<s:url namespace="/" action="listNote"><s:param name="id"><s:property value="id"/></s:param></s:url>"><s:property value="note"/></a></td>
     <td width="20%"><s:property value="commentaires"/></td>
     <td width="20%"><s:property value="prescence"/></td>
+    <td width="20%"><s:property value="noteById.member.id"/></td>
+    <td width="20%"><s:property value="noteById.petitdej.id"/></td>
     <s:url namespace="/" action="deleteNote" var="lien1">
         <s:param name="id">
         <s:property value="noteById.id"/>
@@ -37,7 +41,7 @@
 </s:iterator>
 </div>
 </table>
-  
+ <br /> 
 <div>
 
  
@@ -46,8 +50,8 @@
             <s:fielderror theme="bootstrap"/>
 
 
-            <s:form action="ajouterNote" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
-                    label="Ajouter Note" method="post">
+            <s:form action="updateNote" enctype="multipart/form-data" theme="bootstrap" cssClass="form-horizontal"
+                    label="Editer Appréciation" method="post">
                    
                     
                      <s:textfield
@@ -61,6 +65,7 @@
                         name="noteById.commentaires"
                         cols="20"
                         rows="3"/>
+                        
                     <s:select
                         tooltip="Present ou pas"
                         label="Prescence"
@@ -69,6 +74,16 @@
                         emptyOption="true"
                         headerKey="None"
                         headerValue="None"/>
+                        
+                    <s:textfield
+                        label="Member"
+                        name="noteById.member.id"
+                        tooltip="Entrez L'utilisateur"/>
+                       
+                     <s:textfield
+                        label="Petit Dejeuner"
+                        name="noteById.petitdej.id"
+                        tooltip="Entrez Le petit dejeuner"/>   
                         
                     
              <s:hidden name="editMode"></s:hidden>
