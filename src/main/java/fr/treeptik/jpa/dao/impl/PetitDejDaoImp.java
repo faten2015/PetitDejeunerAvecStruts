@@ -58,12 +58,6 @@ public class PetitDejDaoImp implements PetitDejDao {
 		entityManager.getTransaction().commit();
 	}
 
-	@Override
-	public void updatePetitDej(PetitDej petitdej) {
-		// TODO Auto-generated method stub
-		entityManager.merge(petitdej);
-		
-	}
 
 	
 

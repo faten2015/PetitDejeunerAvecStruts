@@ -54,10 +54,10 @@
                         headerKey="None"
                         headerValue="None"/>
                         
-                        <s:textfield
+                       <s:textfield
                         label="Member"
                         name="noteById.member.id"
-                        tooltip="Entrez L'utilisateur"/>
+                        tooltip="Entrez L'utilisateur"/> 
                        
                         <s:textfield
                         label="Petit Dejeuner"

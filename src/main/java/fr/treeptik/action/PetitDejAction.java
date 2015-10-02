@@ -86,8 +86,8 @@ public class PetitDejAction extends ActionSupport {
 	
 	public String update(){
 		editMode=true;
-		System.out.println(id);
-		petitDejById=petDejDao.find(id);
+		//System.out.println(id);
+		petitDejById.setId(id);
 		petDejDao.update(petitDejById);
 		listPetitDej=petDejDao.findAll();
 		return SUCCESS;

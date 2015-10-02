@@ -10,5 +10,5 @@ public interface PetitDejDao extends Dao<PetitDej> {
 	public void delete(PetitDej obj);
 	public void update(PetitDej obj);
 	public PetitDej getPetitDej(Integer id);
-	public void updatePetitDej(PetitDej petitdej);
+	
 }

@@ -53,8 +53,8 @@
 		<action name="updatePetitDej" class="fr.treeptik.action.PetitDejAction"
 			method="update">
 
-			<result name="success">/pages/petitdej/listPetitDej.jsp</result>
-			<!-- <result name="input">/pages/petitdej/listPetitDej.jsp</result> -->
+			<result>/pages/petitdej/listPetitDej.jsp</result>
+			
 		</action>
 
 		<action name="ajouterPetitDej" class="fr.treeptik.action.PetitDejAction"

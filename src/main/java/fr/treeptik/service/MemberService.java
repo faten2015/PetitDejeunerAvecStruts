@@ -7,5 +7,7 @@ public class MemberService {
 	 public boolean login(Member member){
 		 return true;
 	 }
+	 
+	 
 	
 }
